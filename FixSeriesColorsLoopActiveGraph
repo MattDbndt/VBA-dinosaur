@@ -1,0 +1,99 @@
+Sub Test()
+
+Dim iSrs As Long, nSrs As Long
+
+If ActiveChart Is Nothing Then
+
+  MsgBox "No chart selected. Please try again.", vbExclamation, "No Active Chart"
+
+Else
+
+  With ActiveChart
+
+   nSrs = .SeriesCollection.Count
+
+   For iSrs = 1 To nSrs
+
+    Select Case LCase$(.SeriesCollection(iSrs).Name)
+
+        Case "series1"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(0, 176, 80)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series2"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(255, 190, 0)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series3"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(172, 172, 172)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series4"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(67, 113, 196)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series5"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(255, 48, 152)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series6"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(107, 41, 157)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series7"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(237, 124, 48)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series8"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(255, 0, 0)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+        Case "series9"
+
+            .SeriesCollection(iSrs).Interior.Color = RGB(102, 51, 0)
+
+            .SeriesCollection(iSrs).HasDataLabels = True
+
+            .SeriesCollection(iSrs).Format.Line.Visible = False
+
+     End Select
+
+    Next
+
+   End With
+
+  End If
+
+End Sub

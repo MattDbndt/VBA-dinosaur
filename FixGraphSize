@@ -1,0 +1,17 @@
+Sub ChartSize()
+
+'measures below are shown in points.
+
+‘To convert points -> cm then simply divide by 28.346
+
+‘To convert cm -> points, then multiply by 28.346
+
+    With ActiveChart.Parent
+
+    .Height = 300
+
+    .Width = 500
+
+End With
+
+End Sub
